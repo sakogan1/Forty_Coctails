@@ -1,0 +1,83 @@
+
+<link rel="stylesheet" href="/assets/css/modal.css">
+<%- include(`./partials/header`) %>
+<%- include(`./partials/coctailView`) %>
+<%- include(`./partials/footer`) %>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <% data.forEach(key=> {%>
+          
+          
+         
+        <div class="container" id="myBtn">
+            <a href="/details/<%= key.idDrink %> ">
+            <img src=<%=key.strDrinkThumb %> alt="<%=key.strDrink %>">
+            <div class="coctailModal"><h3>
+                <%=key.strDrink %></a>
+            </h3>
+            <h2><%= key.strInstructionsDE%></h2>
+            <p><%= key.strIngredient1%></p>
+            <p><%= key.strIngredient2%></p> 
+            <p><%= key.strIngredient3%></p>
+            <p><%= key.strIngredient4%></p>
+            <p><%= key.strIngredient5%></p>
+            <p><%= key.strIngredient6%></p>
+            <p><%= key.strIngredient7%></p>
+            <p><%= key.strIngredient8%></p>
+            <p><%= key.strIngredient9%></p>
+            <p><%= key.strIngredient10%></p>
+            <p><%= key.strIngredient11%></p>
+            <p><%= key.strIngredient12%></p>
+            <p><%= key.strIngredient13%></p>
+            <p><%= key.strIngredient14%></p>
+            <p><%= key.strIngredient15%></p>
+            <p><%= key.strMeasure1%></p>
+            <p><%= key.strMeasure2%></p>
+            <p><%= key.strMeasure3%></p>
+            <p><%= key.strMeasure4%></p>
+            <p><%= key.strMeasure5%></p>
+            <p><%= key.strMeasure6%></p>
+            <p><%= key.strMeasure7%></p>
+            <p><%= key.strMeasure8%></p>
+            <p><%= key.strMeasure9%></p>
+            <p><%= key.strMeasure10%></p>
+            <p><%= key.strMeasure11%></p>
+            <p><%= key.strMeasure12%></p>
+            <p><%= key.strMeasure13%></p>
+            <p><%= key.strMeasure14%></p>
+            <p><%= key.strMeasure15%></p>
+
+           </div>
+               
+            
+        </div>
+        <%})%>
+  
+  </div>
+  <script>
+
+    var modal = document.getElementById("myModal");
+    
+    var btn = document.getElementById("myBtn");
+    
+    var span = document.getElementsByClassName("close")[0];
+    
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // window.onclick = function(event) {
+    //   if (event.target == modal) {
+    //     modal.style.display = "none";
+    //   }
+    // }
+    
+      </script>
+
+

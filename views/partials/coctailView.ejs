@@ -1,0 +1,20 @@
+<main>
+    
+    <%# JSON.stringify(json) %>
+        <% data.forEach(key=> {%>
+          
+          
+         
+            <div class="container" id="myBtn">
+                <a href="/details/<%= key.idDrink %> ">
+                <img src=<%=key.strDrinkThumb %> alt=<%=key.strDrink %>>
+                <div class="coctailName"><h2>
+                    <%=key.strDrink %></a>
+                </h2>
+               </div>
+                   
+                
+            </div>
+            <%})%>
+
+        </main>
